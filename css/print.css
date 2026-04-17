@@ -1,0 +1,49 @@
+/* ═══════════════════════════════════════════════════════════
+   PRINT STYLESHEET
+   ═══════════════════════════════════════════════════════════ */
+
+@media print {
+  body {
+    background: #fff;
+    color: #1a1814;
+    font-size: 11pt;
+  }
+
+  body::after { display: none; }
+
+  #sidebar,
+  .hamburger,
+  .sidebar-overlay,
+  .orb { display: none !important; }
+
+  #main { margin-left: 0; }
+
+  .page-section {
+    padding: 1.5cm 0;
+    border-bottom: 0.5pt solid #ccc;
+    break-inside: avoid;
+  }
+
+  .page-title, h2, h3,
+  .card-title, .role-title,
+  .lab-block-title { color: #1a1814; }
+
+  .eyebrow, .sec-label-num, .card-label,
+  .lab-block-num, .lab-field-label,
+  .role-label, .badge, .nav-num { color: #666; }
+
+  .gold-rule { background: #ccc; }
+
+  .card, .lab-block, .role-panel, .callout,
+  .diss-item, .assess-item {
+    border-color: #ddd;
+    background: #fafafa;
+    box-shadow: none;
+    transform: none;
+  }
+
+  a { color: #333; text-decoration: underline; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #888; }
+
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
